@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     login() {
-      // Lógica para el logueo
+      // Lógica para el logueo.
       alert('Funcionalidad de logueo no implementada.');
     },
     async searchTechnicians() {
@@ -93,6 +93,7 @@ input {
 }
 
 select {
-    padding: 10px;
+    padding: 10px; 
 }
+
 </style> 
