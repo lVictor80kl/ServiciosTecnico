@@ -1,12 +1,16 @@
+// filepath: vite.config.js
 import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
+import vue from '@vitejs/plugin-vue';
+import { resolve } from 'path';
 
 export default defineConfig({
-    plugins: [
-        laravel({
-            input: ['resources/js/app.js', 'resources/css/app.css'], // Ajusta según tus archivos
-            refresh: true,
-            base: process.env.APP_URL || 'http://localhost:8000',
-        }),
-    ],
-}); 
+  plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, './src'), // Alias para rutas
+    },
+  },
+  server: {
+    port: 3000, // Cambia el puerto aquí
+  },
+});
